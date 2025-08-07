@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Diamantes</title>
+  <link rel="stylesheet" href="diamantes.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Free Fire 💎</h1>
+
+    <div class="item-link">
+      <a href="#" onclick="mostrarPrecos()">🔹 Mostrar Diamantes</a>
+    </div>
+
+    <div id="precos-diamantes" class="precos-container" style="display: none;">
+      <h3>Escolha seu pacote</h3>
+      <div class="item">
+        <span>110 diamantes — 50 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>220 diamantes — 100 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>550 diamantes — 250 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>1.100 diamantes — 500 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>2.200 diamantes — 1.000 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>5.600 diamantes — 2.500 MZN</span>
+        <button>Comprar</button>
+      </div>
+      <div class="item">
+        <span>10.000 diamantes — 4.500 MZN</span>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function mostrarPrecos() {
+      const tabela = document.getElementById("precos-diamantes");
+      tabela.style.display = tabela.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

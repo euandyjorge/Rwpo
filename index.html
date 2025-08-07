@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 30px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe7;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #00ffe7;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffe7;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #00c9b7;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      input, button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📧 Criar Conta</h2>
+     <input type="text" id="usuario" placeholder="usuario">
+    <input type="email" id="novoEmail" placeholder="Seu email">
+    <input type="password" id="novaSenha" placeholder="Sua senha">
+    <button onclick="criarConta()">Criar Conta</button>
+  </div>
+
+  <script>
+    function criarConta() {
+      const email = document.getElementById("novoEmail").value;
+      const senha = document.getElementById("novaSenha").value;
+
+      if (email && senha) {
+        localStorage.setItem("email", email);
+        localStorage.setItem("senha", senha);
+        alert("Conta criada com sucesso!");
+        window.location.href = "login.html";
+      } else {
+        alert("Preencha todos os campos!");
+      }
+    }
+  </script>
+</body>
+</html>
